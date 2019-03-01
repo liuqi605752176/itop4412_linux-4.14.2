@@ -66,6 +66,14 @@ config SND_SOC_SAMSUNG_SMDK_WM8994
 	help
 		Say Y if you want to add support for SoC audio on the SMDKs.
 
+config SND_SOC_SAMSUNG_SMDK_WM8960
+	tristate "SoC I2S Audio support for WM8960 on itop4412"
+	depends on I2C=y
+	select SND_SOC_WM8960
+	select SND_SAMSUNG_I2S
+	help
+		Say Y if you want to add support for SoC audio on the itop4412.
+
 config SND_SOC_SAMSUNG_S3C24XX_UDA134X
 	tristate "SoC I2S Audio support UDA134X wired to a S3C24XX"
 	depends on ARCH_S3C24XX
